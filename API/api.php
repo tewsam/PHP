@@ -50,8 +50,16 @@ public function foo($data){
 }
 
 }
-$_REQUEST['method']='fullName';
-$_REQUEST['pop']=4;
+
+
+/* 
+normally you expect the request to be
+www.stite.com/api?method=singleUser&email=user1@emialserver.com
+*/
+
+$_REQUEST['method']='singleUser';
+$_REQUEST['email']='user1@emialserver.com';
+
 $params=$_REQUEST;
 
 
