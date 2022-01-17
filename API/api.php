@@ -23,7 +23,8 @@ return $this->${customMethod}();
 
 //get a fullName of all users	
 private function API_fullName(){
-	
+
+//on production, the sql queries should be on a separte file	
 $stmt = $this->con->query('SELECT  firstName, lastName FROM myUsers');
 $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
